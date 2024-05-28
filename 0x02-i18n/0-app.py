@@ -9,7 +9,7 @@ app = Flask(__name__)
 babel = Babel(app)
 
 
-@app.route('/')
+@app.route('/', strict_slashes=False)
 def home():
     """Home"""
     return render_template('0-index.html')
